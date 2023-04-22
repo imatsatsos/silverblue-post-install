@@ -9,6 +9,12 @@ This means we heavily relly on flatpaks for our GUI applications and containers 
 This post-install script provides a menu and an easy to use experience. You just press a number and enter.  
 The script will apply mostly all the configuration I do on my Fedora Silverblue installs and is opinionated.  
 
+## How to use
+`git clone` this repo  
+`cd fedora-silverblue-postinstall`  
+`chmod +x silverblue-setup.sh`  
+`./silverblue-postinstall.sh`
+
 ## Update system
 Updates the system to the latest version. Does not upgrade to a new Fedora release.
 
