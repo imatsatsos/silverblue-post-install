@@ -25,7 +25,7 @@ This option will install any flatpaks declared in [flatpak-packages.txt](./flatp
 ## Setup a Fedora Toolbox
 Creates a Fedora toolbox, installs some packages and speeds up dnf for this container
 
-## Speed up permorance, boot and shutdown
+## Speed up performance, boot and shutdown
 ### These are not tested on AMD machines.
 Grub timeout changed from 5 secs to 2 secs  
 Systemd stop units timeouts changed from 90secs to 15secs  
