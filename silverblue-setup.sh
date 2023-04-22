@@ -69,7 +69,7 @@ while true; do
 			read -p "Press any key to continue... " -n1 -s
 			break
 			;;
-		6)	# ERROR: WITH ENTERING TOOLBOX, says toolbox fedora 38 not found
+		6)	# ERROR: WITH ENTERING TOOLBOX
 			echo "Setting up a Fedora toolbox.."
 			sleep 1
 			toolbox create -y fedora
