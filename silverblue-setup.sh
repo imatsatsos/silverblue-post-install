@@ -96,7 +96,6 @@ while true; do
 			echo "Disabling NetworkManager-wait-online.service"
 			sudo systemctl disable NetworkManager-wait-online.service
 			echo "Applying medium power saving to disk devices"
-			## ERROR PERMISION DENIED WITH SUDO ECHO, alt?
 			echo "ACTION==\"add\", SUBSYSTEM==\"scsi_host\", KERNEL==\"host*\", ATTR{link_power_management_policy}=\"med_power_with_dipm\"" | sudo tee /etc/udev/rules.d/hd_power_save.rules
 			echo "Applied all changes!"
 			read -p "Press any key to continue... " -n1 -s
