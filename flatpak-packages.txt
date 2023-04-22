@@ -1,0 +1,16 @@
+com.brave.Browser
+com.spotify.client
+io.mpv.Mpv
+com.mattjakeman.ExtensionManager
+com.github.wwmmeasyeffects
+com.github.tchx84.Flatseal
+com.usebottles.bottles
+org.gnome.Boxes
+com.raggesilver.BlackBox
+com.discordapp.Discord
+org.signal.Signal
+net.cozic.joplin_desktop
+io.gitlab.librewolf-community
+org.gnome.Games
+org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
+com.obsproject.Studio
