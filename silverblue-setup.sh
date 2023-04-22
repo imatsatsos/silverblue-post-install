@@ -1,5 +1,5 @@
 #!/bin/bash
-#PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
 clear
 echo "#####  Fedora 38 Silverblue Setup #####"
 echo "Please Choose one of the following options:"
