@@ -24,7 +24,8 @@ Enables the RPM Fusion free and non-free repos.
 Updates the system to the latest version. Does not upgrade to a new Fedora release.
 
 - ## Enable auto update checking
-Enables auto update checking without downloading them. You can check if there are new updates using `rpm-osree status` or `rpm-ostree status -v` for a list of the updated packages. To upgrade either choose [option 1](#update-system) or run `rpm-ostree upgrade`
+Enables auto update checking without downloading them. You can check if there are new updates using `rpm-osree status` or  
+`rpm-ostree status -v` for a list of the updated packages. To upgrade either choose [option 1](#update-system) or run `rpm-ostree upgrade`
 
 - ## Enable flathub repository
 Removes Fedora's filtered flathub version and adds the full Flathub repository. Also updates any flatpaks that are installed.
@@ -37,13 +38,13 @@ This option will install any flatpaks declared in [flatpak-packages.txt](./flatp
 Creates a Fedora toolbox, installs some packages and speeds up dnf for this container
 
 - ## Speed up performance, boot and shutdown
-**! These are not tested on AMD machines. !**
+:warning:**! These are not tested on AMD machines. !**  
 Grub timeout changed from 5 secs to 2 secs  
 Systemd stop units timeouts changed from 90secs to 15secs  
 Disables mitigations for Intel processors  
 Disables boot splash screen  
 Disables NetworkManager-wait-online.service  
-Enables Sata Active Link Power Management to med_power_with_dipm ([archwiki])(https://wiki.archlinux.org/title/Power_management#SATA_Active_Link_Power_Management)
+Enables Sata Active Link Power Management to med_power_with_dipm [(archwiki)](https://wiki.archlinux.org/title/Power_management#SATA_Active_Link_Power_Management)
 
 - ## Install intel-undervolt
 Installs intel-undervolt  
