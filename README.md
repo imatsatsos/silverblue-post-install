@@ -1,5 +1,5 @@
-# fedora-silverblue-postinstall
-A Fedora Silverblue post installation script  
+# fedora-silverblue-post-install
+A Fedora Silverblue post installation **menu** script  
   
 This is WIP! More features to be added and a lot of code cleanup and compartmentalization.  
   
