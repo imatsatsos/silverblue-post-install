@@ -17,6 +17,9 @@ The script will apply mostly all the configuration **I** do on my Fedora Silverb
 - `./silverblue-postinstall.sh`
   
 ## What it includes
+- ## Enable RPM Fusion
+Enables the RPM Fusion free and non-free repos.
+
 - ## Update system
 Updates the system to the latest version. Does not upgrade to a new Fedora release.
 
