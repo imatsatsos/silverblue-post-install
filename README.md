@@ -44,6 +44,7 @@ Systemd stop units timeouts changed from 90secs to 15secs
 Disables mitigations for Intel processors  
 Disables boot splash screen  
 Disables NetworkManager-wait-online.service  
+Disables ModemManager.service  
 Enables Sata Active Link Power Management to med_power_with_dipm [(archwiki)](https://wiki.archlinux.org/title/Power_management#SATA_Active_Link_Power_Management)
 
 - ## Install intel-undervolt
