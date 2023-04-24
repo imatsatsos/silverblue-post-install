@@ -66,7 +66,7 @@ while true; do
 			sleep 1
 			PACKAGES=$(< ./flatpak-packages.txt)
 			for PKG in $PACKAGES; do
-				flatpak install --user --non-interactive flathub $PKG
+				flatpak install --user flathub $PKG
 			done
 			echo "All flatpaks installed!"
 			read -p "Press any key to continue... " -n1 -s
