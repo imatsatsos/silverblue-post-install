@@ -6,6 +6,7 @@ This is WIP! More features to be added and a lot of code cleanup and compartment
 Fedora Silverblue is an 'immutable' Linux distribution.  
 This means we heavily relly on [flatpaks](https://www.flatpak.org/) for our GUI applications and containers (toolbox) for our terminal based applications.  
 
+### A few notes
 This post-install script provides a **menu** and an easy to use experience. You just press a number and enter.  
 The script will apply mostly all the configuration **I** do on my Fedora Silverblue installs.
 
@@ -24,8 +25,7 @@ Enables the RPM Fusion free and non-free repos.
 Updates the system to the latest version. Does not upgrade to a new Fedora release.
 
 - ## Enable auto update checking
-Enables auto update checking without downloading them. You can check the status of pending updates using `rpm-osree status` or  
-`rpm-ostree status -v` for a list of the updated packages. To upgrade either choose [option 1](#update-system) or run `rpm-ostree upgrade`
+Enables auto update checking without downloading them. You can check the status of pending updates using `rpm-osree status` or `rpm-ostree status -v` for a list of the updated packages. To upgrade either choose [option 1](#update-system) or run `rpm-ostree upgrade`
 
 - ## Enable flathub repository
 Removes Fedora's filtered flathub version and adds the full Flathub repository. Also updates any flatpaks that are installed.
