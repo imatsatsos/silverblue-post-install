@@ -93,7 +93,7 @@ while true; do
 			echo "Setting grub timeout to 2 seconds!"
 			sudo sed -i 's/GRUB_TIMEOUT.*/GRUB_TIMEOUT=2/' /etc/default/grub
 			echo "Setting nomitigations, noplymouth, nowatchdog"
-			rpm-ostree kargs --append='rd.plymouth=0 plymouth.enable=0 mitigations=off nowatchdog'
+			rpm-ostree kargs --append='rd.plymouth=0 plymouth.enable=0 mitigations=off nowatchdog libahci.ignore_sss=1'
 			sudo sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf
 			sudo sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf
 			echo "Disabling services.."
