@@ -51,22 +51,21 @@ while true; do
 			read -p "Press any key to continue... " -n1 -s
 			break
 			;;
-		4)	echo "Enabling flatpak repos and updating flatpaks!"
+		4)	echo "Enabling flathub repo and updating flatpaks!"
 			sleep 1
 			flatpak update
 			flatpak remote-delete flathub --force
-			flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+			flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 			flatpak update --appstream
 			echo "Flathub enabled and flatpaks updated!"
 			read -p "Press any key to continue... " -n1 -s
 			break
 			;;
-			# ERROR: No remote refs found for <flathub>
 		5)	echo "Installing flatpaks!"
 			sleep 1
 			PACKAGES=$(< ./flatpak-packages.txt)
 			for PKG in $PACKAGES; do
-				flatpak install --user flathub $PKG
+				flatpak install --user --non-interactive flathub $PKG
 			done
 			echo "All flatpaks installed!"
 			read -p "Press any key to continue... " -n1 -s
