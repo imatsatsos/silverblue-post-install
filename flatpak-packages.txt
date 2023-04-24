@@ -1,8 +1,8 @@
 com.brave.Browser
-com.spotify.client
+com.spotify.Client
 io.mpv.Mpv
 com.mattjakeman.ExtensionManager
-com.github.wwmmeasyeffects
+com.github.wwmm.easyeffects
 com.github.tchx84.Flatseal
 com.usebottles.bottles
 org.gnome.Boxes
