@@ -8,7 +8,7 @@ echo "* this menu will reappear *"
 #Other variables
 #OH_MY_ZSH_URL="https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
 
-items=("Enable RPM Fusion - Enables the RPM Fusion repos for your specific version"
+items=("Enable RPM Fusion - Enables the RPM Fusion free and non-free repos"
        "Update system to latest version. Does NOT upgrade to new Fedora release."
        "Enable auto update checking. Does NOT download them!"
        "Enable Flathub - Enables Flathub repo and updates flatpaks"
@@ -23,14 +23,17 @@ while true; do
 	select item in "${items[@]}"
 	do 
     case $REPLY in
-    # ISSUE: RPM Fusion needs a reboot and further setup to unlock it from a release version on silverblue
-		1)	echo "Enabling RPM Fusion"
-		    sleep 1
-			echo "This feature is not available yet!"
+			# ISSUE: RPM Fusion needs a reboot and further setup to unlock it from a release version on silverblue
+		1)	echo "Enabling RPM Fusion!"
+			sleep 1
+			sudo rpm-ostree install \
+			    https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+			    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+			echo "RPM Fusion enabled. You must reboot for the changes to take effect!"
 			read -p "Press any key to continue... " -n1 -s
 			break
 			;;
-		2)	echo "Upgrading the system components"
+		2)	echo "Upgrading the system components!"
 			sleep 1
 			rpm-ostree status
 			rpm-ostree upgrade
