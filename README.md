@@ -24,7 +24,7 @@ Enables the RPM Fusion free and non-free repos.
 Updates the system to the latest version. Does not upgrade to a new Fedora release.
 
 - ## Enable auto update checking
-Enables auto update checking without downloading them. You can check if there are new updates using `rpm-osree status` or  
+Enables auto update checking without downloading them. You can check the status of pending updates using `rpm-osree status` or  
 `rpm-ostree status -v` for a list of the updated packages. To upgrade either choose [option 1](#update-system) or run `rpm-ostree upgrade`
 
 - ## Enable flathub repository
