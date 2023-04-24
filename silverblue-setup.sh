@@ -57,6 +57,7 @@ while true; do
 			flatpak remote-delete flathub --force
 			flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 			flatpak update --appstream
+			flatpak update -y
 			echo "Flathub enabled and flatpaks updated!"
 			read -p "Press any key to continue... " -n1 -s
 			break
