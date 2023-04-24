@@ -43,7 +43,7 @@ Grub timeout changed from 5 secs to 2 secs
 Systemd stop units timeouts changed from 90secs to 15secs  
 Disables mitigations for Intel processors  
 Disables boot splash screen  
-Disables Staggered spin-up [(archwiki)](https://wiki.archlinux.org/title/Improving_performance/Boot_process#Staggered_spin-up)
+Disables Staggered spin-up [(archwiki)](https://wiki.archlinux.org/title/Improving_performance/Boot_process#Staggered_spin-up)  
 Disables NetworkManager-wait-online.service  
 Disables ModemManager.service  
 Enables Sata Active Link Power Management to med_power_with_dipm [(archwiki)](https://wiki.archlinux.org/title/Power_management#SATA_Active_Link_Power_Management)
