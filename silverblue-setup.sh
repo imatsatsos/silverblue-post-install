@@ -96,8 +96,9 @@ while true; do
 			rpm-ostree kargs --append='rd.plymouth=0 plymouth.enable=0 mitigations=off nowatchdog'
 			sudo sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf
 			sudo sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf
-			echo "Disabling NetworkManager-wait-online.service"
+			echo "Disabling services.."
 			sudo systemctl disable NetworkManager-wait-online.service
+			sudo systemctl disable ModemManager.service
 			echo "Applying medium power saving to disk devices"
 			echo "ACTION==\"add\", SUBSYSTEM==\"scsi_host\", KERNEL==\"host*\", ATTR{link_power_management_policy}=\"med_power_with_dipm\"" | sudo tee /etc/udev/rules.d/hd_power_save.rules
 			echo "Applied all changes!"
