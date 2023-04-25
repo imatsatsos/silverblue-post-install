@@ -115,9 +115,11 @@ EOF
 			read -p "Press any key to continue... " -n1 -s
 			break
 			;;
-		9)	echo "Installing Nvidia drivers!"
-			sleep 1
-			echo "This feature is not available yet!"
+		9)	echo "Installing Nvidia drivers!"; sleep 1
+			sudo rpm-ostree install akmod-nvidia xorg-x11-drv-nvidia
+			sudo rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1
+			echo "Nvidia drivers are now installed!"
+			echo "Please restart your system."
 			read -p "Press any key to continue... " -n1 -s
 			break
 			;;
