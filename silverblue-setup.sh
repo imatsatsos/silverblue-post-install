@@ -80,7 +80,7 @@ max_parallel_downloads=10
 fastestmirror=True
 EOF
 			toolbox run -c fedora sudo dnf upgrade -y
-			toolbox run -c fedora sudo dnf install -y neovim exa lolcat fastfetch xeyes
+			toolbox run -c fedora sudo dnf install -y neovim exa lolcat tldr fastfetch xeyes
 			toolbox list
 			echo "Fedora toolbox is ready!"
 			read -p "Press any key to continue... " -n1 -s
