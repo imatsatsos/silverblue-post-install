@@ -72,16 +72,15 @@ while true; do
 			read -p "Press any key to continue... " -n1 -s
 			break
 			;;
-		6)	# ERROR: WITH ENTERING TOOLBOX
-			echo "Setting up a Fedora toolbox.."
+		6)	echo "Setting up a Fedora toolbox.."
 			sleep 1
 			toolbox create -y fedora
-			toolbox enter fedora
-			echo "max_parallel_downloads=10" >> /etc/dnf/dnf.conf
-			echo "fastestmirror=True" >> /etc/dnf/dnf.conf
-			sudo dnf upgrade -y
-			sudo dnf install -y htop btop lolcat neofetch xeyes
-			exit
+			toolbox run -c fedora sudo tee -a /etc/dnf/dnf.conf > /dev/null << EOF
+max_parallel_downloads=10
+fastestmirror=True
+EOF
+			toolbox run -c fedora sudo dnf upgrade -y
+			toolbox run -c fedora sudo dnf install -y neovim exa lolcat fastfetch xeyes
 			toolbox list
 			echo "Fedora toolbox is ready!"
 			read -p "Press any key to continue... " -n1 -s
