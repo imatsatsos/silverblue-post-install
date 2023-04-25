@@ -32,10 +32,10 @@ Removes Fedora's filtered flathub version and adds the full Flathub repository. 
 
 - ## Install Software
 Remember what we discussed in the beggining of this ReadMe?  
-This option will install any flatpaks declared in [flatpak-packages.txt](./flatpak-packages.txt)
+This option will install any flatpaks declared in [flatpak-packages.txt](./flatpak-packages.txt).
 
 - ## Setup a Fedora Toolbox
-Creates a Fedora toolbox, installs some packages and speeds up dnf for this container
+Creates a Fedora toolbox, installs some packages and speeds up dnf for this container.
 
 - ## Speed up performance, boot and shutdown
 :warning:**! These are not tested on AMD machines. !**  
