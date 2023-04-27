@@ -99,7 +99,9 @@ EOF
 			sudo systemctl disable NetworkManager-wait-online.service
 			sudo systemctl disable ModemManager.service
 			echo "Applying medium power saving to disk devices"
-			echo "ACTION==\"add\", SUBSYSTEM==\"scsi_host\", KERNEL==\"host*\", ATTR{link_power_management_policy}=\"med_power_with_dipm\"" | sudo tee /etc/udev/rules.d/hd_power_save.rules
+			sudo cp -fv ./udev/hd_power_save.rules /etc/udev/rules.d/hd_power_save.rules
+			echo "Applying i/o scheduler [none] to SSD devices"
+			sudo cp -fv ./udev/60-ioschedulers.rules /etc/udev/rules.d/60-ioschedulers.rules
 			echo "Applied all changes!"
 			read -p "Press any key to continue... " -n1 -s
 			break
