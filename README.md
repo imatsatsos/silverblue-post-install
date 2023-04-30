@@ -49,6 +49,7 @@ Disables ModemManager.service
 Enables Sata Active Link Power Management to med_power_with_dipm. [(archwiki)](https://wiki.archlinux.org/title/Power_management#SATA_Active_Link_Power_Management)  
 Selects [none] as I/O scheduler for SSD devices. [(youtube)](https://youtu.be/1B3P3OziWlI)  
 Increases vm.max_map_count to 2147483642 [(fedora)](https://fedoraproject.org/wiki/Changes/IncreaseVmMaxMapCount)  
+*[DISABLED]* Sets vm.swappiness to 10 ( NOT RECOMMENDED FOR ZRAM CONFIGURATIONS) 
 
 - ## Install intel-undervolt
 Installs intel-undervolt  
