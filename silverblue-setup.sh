@@ -104,6 +104,8 @@ EOF
 			sudo cp -fv ./udev/60-ioschedulers.rules /etc/udev/rules.d/60-ioschedulers.rules
 			echo "Applying vm.max_map_count tweak"
 			echo "vm.max_map_count=2147483642" | sudo tee -a /etc/sysctl.conf
+			echo "Setting vm.swappiness to 10"
+			echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
 			echo "Applied all changes!"
 			read -p "Press any key to continue... " -n1 -s
 			break
