@@ -98,14 +98,16 @@ EOF
 			echo "Disabling services.."
 			sudo systemctl disable NetworkManager-wait-online.service
 			sudo systemctl disable ModemManager.service
+			# MAYBE BFQ IS BETTER FOR INTERACTIVITY?
 			echo "Applying medium power saving to disk devices"
 			sudo cp -fv ./udev/hd_power_save.rules /etc/udev/rules.d/hd_power_save.rules
 			echo "Applying i/o scheduler [none] to SSD devices"
 			sudo cp -fv ./udev/60-ioschedulers.rules /etc/udev/rules.d/60-ioschedulers.rules
 			echo "Applying vm.max_map_count tweak"
 			echo "vm.max_map_count=2147483642" | sudo tee -a /etc/sysctl.conf
-			echo "Setting vm.swappiness to 10"
-			echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
+			# DONT SET IT TO 10 FOR ZRAM, ONLY FOR SWAP ON DISK
+			#echo "Setting vm.swappiness to 10"
+			#echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-sysctl.conf
 			echo "Applied all changes!"
 			read -p "Press any key to continue... " -n1 -s
 			break
