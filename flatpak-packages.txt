@@ -15,3 +15,4 @@ org.gnome.Games
 org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
 com.obsproject.Studio
 com.valvesoftware.Steam
+com.anydesk.Anydesk
