@@ -1,5 +1,4 @@
-# fedora-silverblue-post-install
-A Fedora Silverblue post installation **menu** script  
+# A Fedora Silverblue post installation **menu** script  
   
 This is WIP! More features to be added and a lot of code cleanup and compartmentalization.  
   
@@ -8,9 +7,8 @@ This means we heavily relly on [flatpaks](https://www.flatpak.org/) for our GUI 
 
 ### A few notes
 This post-install script provides a **menu** and an easy to use experience. You just press a number and enter.  
-The script will apply mostly all the configuration **I** do on my Fedora Silverblue installs.
+The script will apply all the configuration **I do** on my Fedora Silverblue installs.
 
----
 ## How to use
 - `git clone` this repo  
 - `cd fedora-silverblue-postinstall`  
