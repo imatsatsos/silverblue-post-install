@@ -35,6 +35,9 @@ This option will install any flatpaks declared in [flatpak-packages.txt](./flatp
 - ## Setup a Fedora Toolbox
 Creates a Fedora toolbox, installs some packages and speeds up dnf for this container.
 
+- ## Install NVidia Drivers
+Installs NVidia drivers.  
+
 - ## Speed up performance, boot and shutdown
 :warning:**! These are not tested on AMD machines. !**  
 Grub timeout changed from 5 secs to 2 secs.  
