@@ -11,8 +11,7 @@ The script will apply all the configuration **I do** on my Fedora Silverblue ins
 
 ## How to use
 - `git clone` this repo  
-- `cd fedora-silverblue-postinstall`  
-- `chmod +x silverblue-setup.sh`  
+- `cd silverblue-post-install`  
 - `./silverblue-postinstall.sh`
   
 ## What it includes
